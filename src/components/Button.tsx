@@ -1,10 +1,12 @@
 import clsx from "clsx";
 import React from "react";
 
+type ButtonVariant = "primary" | "hero" | "glow" | "outline";
+type ButtonSize = "sm" | "md" | "lg" | "xl";
 interface buttonProps {
   children: React.ReactNode;
-  variant: string;
-  size?: string;
+  variant: ButtonVariant;
+  size?: ButtonSize;
   className?: string;
   onClick?: () => void;
 }

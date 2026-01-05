@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* * {
+  background-color: rgb(19, 16, 16);
+} */
+
 @layer base {
   :root {
     --background: 222 47% 6%;

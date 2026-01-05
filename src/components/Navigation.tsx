@@ -27,11 +27,25 @@ const Navigation = () => {
         isScrolled ? "glass-card py-4" : "py-6"
       }`}
     >
+      <div className="relative w-full h-full">
+        <div
+          className="absolute bottom-[-20] right-10 w-[300px] h-[300px]
+                  bg-green-400/20 rounded-full blur-[120px]"
+        />
+        <div
+          className="absolute bottom-[-20] right-20 w-[180px] h-[180px]
+                  bg-green-300/40 rounded-full blur-3xl"
+        />
+        <div
+          className="absolute bottom-[-20] right-28 w-[60px] h-[60px]
+                  bg-green-200 rounded-full shadow-[0_0_40px_rgba(34,197,94,0.9)]"
+        />
+      </div>
       <div className="container mx-auto px-6 flex items-center justify-between">
         <a href="#" className="text-2xl font-bold font-mono">
-          <span className="text-primary">&lt;</span>
-          <span className="text-foreground">Sajak</span>
-          <span className="text-primary">/&gt;</span>
+          <span className="text-gray-400">&lt;</span>
+          <span className="text-red-400"> Sajak </span>
+          <span className="text-gray-400">/&gt;</span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">
@@ -39,7 +53,7 @@ const Navigation = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium"
+              className="text-gray-400 hover:text-primary transition-colors duration-300 font-medium"
             >
               {link.name}
             </a>

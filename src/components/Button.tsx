@@ -6,6 +6,7 @@ interface buttonProps {
   variant: string;
   size?: string;
   className?: string;
+  onClick?: () => void;
 }
 
 export default function Button({
@@ -13,6 +14,7 @@ export default function Button({
   variant = "primary",
   size = "md",
   className,
+  onClick,
   ...props
 }: buttonProps) {
   const baseStyles =
@@ -20,8 +22,8 @@ export default function Button({
 
   const variants = {
     primary: "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500",
-    hero: "bg-purple-600 text-white shadow-lg shadow-purple-600/30 hover:shadow-purple-600/50 hover:scale-105",
-    glow: "bg-purple-600/10 text-purple-600 border border-purple-600/50 hover:bg-purple-600/20 hover:shadow-lg hover:shadow-purple-600/20",
+    hero: "bg-green-400 text-white shadow-lg shadow-gray-600/30 hover:shadow-gray-600/50 hover:scale-105",
+    glow: "bg-gray-600/20 text-green-200 border border-green-600/50 hover:bg-gray-600/20 hover:shadow-lg hover:shadow-green-600/20",
 
     outline:
       "border border-gray-300 text-gray-900 hover:bg-gray-100 focus:ring-gray-400",
@@ -38,6 +40,7 @@ export default function Button({
     <button
       className={clsx(baseStyles, variants[variant], sizes[size], className)}
       {...props}
+      onClick={onClick}
     >
       {children}
     </button>

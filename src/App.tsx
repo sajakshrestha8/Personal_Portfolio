@@ -20,9 +20,9 @@ const App = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="bg-gray-900 min-h-screen flex items-center justify-center relative overflow-hidden">
       <div className="absolute inset-0 opacity-30" />
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-100 rounded-full blur-3xl floating" />
+      <div className="absolute top-1/2.5 left-1/3.5 w-105 h-50 bg-green-100 rounded-full blur-3xl floating" />
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-secondary/10 rounded-full blur-3xl floating-delayed" />
 
       <div className="mx-auto px-6 relative z-10">
@@ -30,11 +30,11 @@ const App = () => {
           <div className="inline-block mb-8 animate-fade-up">
             <div className="rounded-lg px-6 py-3 font-mono text-sm border-1 border-blue-100">
               <span className="text-blue-400">$</span>
-              <span className="text-gray-500 ml-2">whoami</span>
+              <span className="text-gray-400 ml-2">whoami</span>
             </div>
           </div>
 
-          <h1 className="text-5xl md:text-7xl lg:text-7xl font-bold mb-6 animate-fade-up animation-delay-200">
+          <h1 className="text-5xl md:text-7xl lg:text-7xl font-bold text-gray-200 mb-6 animate-fade-up animation-delay-200">
             Hi, I'm <span className="gradient-text">Sajak Shrestha</span>
           </h1>
 
@@ -63,30 +63,30 @@ const App = () => {
           <div className="flex items-center justify-center gap-6 animate-fade-up animation-delay-800">
             <a
               href="#"
-              className="p-3 rounded-full glass-card text-muted-foreground hover:text-primary hover:glow-subtle transition-all duration-300"
+              className="p-3 rounded-full border border-gray-400 hover:border-green-300 text-gray-400 hover:text-green-300 hover:glow-subtle transition-all duration-300"
               aria-label="GitHub"
             >
-              <Github size={24} />
+              <Github size={32} />
             </a>
             <a
               href="#"
-              className="p-3 rounded-full glass-card text-muted-foreground hover:text-primary hover:glow-subtle transition-all duration-300"
+              className="p-3 rounded-full border border-gray-400 hover:border-green-300 text-gray-400 hover:text-green-300 hover:glow-subtle transition-all duration-300"
               aria-label="LinkedIn"
             >
-              <Linkedin size={24} />
+              <Linkedin size={32} />
             </a>
             <a
               href="#"
-              className="p-3 rounded-full glass-card text-muted-foreground hover:text-primary hover:glow-subtle transition-all duration-300"
+              className="p-3 rounded-full border border-gray-400 hover:border-green-300 text-gray-400 hover:text-green-300 hover:glow-subtle transition-all duration-300"
               aria-label="Email"
             >
-              <Mail size={24} />
+              <Mail size={32} />
             </a>
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <ArrowDown className="text-muted-foreground" size={24} />
+        <div className="absolute -translate-x-1/2 animate-bounce border-1 rounded-full border-gray-500 p-2">
+          <ArrowDown className="text-gray-400" size={24} />
         </div>
       </div>
     </section>
